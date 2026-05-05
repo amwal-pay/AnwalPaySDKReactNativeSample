@@ -8,3 +8,6 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+
+# slf4j is used by amwal_sdk transitively but the static binder is not present at runtime
+-dontwarn org.slf4j.impl.StaticLoggerBinder
